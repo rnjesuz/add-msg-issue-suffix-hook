@@ -36,7 +36,7 @@ def main():
         f.seek(0, 0)
         if issue_name and issue_name not in content_subject:
             suffix = template.format(issue_name)
-            f.write("{}\n\n {}".format(content, suffix))
+            f.write("{}\n\n{}".format(content, suffix))
         else:
             f.write(content)
 
