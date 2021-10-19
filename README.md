@@ -32,6 +32,7 @@ Add this to your `.pre-commit-config.yaml`
 
 ### Optional template argument
 Change how the issue is rendered to the commit message using the `--template` argument.
+
 Default is `[<issue name goes here>]`
 
 ```yaml
