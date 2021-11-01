@@ -1,11 +1,13 @@
 [tool.poetry]
 name = "add_msg_issue_suffix_hook"
-version = "v0.1.0"
+version = "v0.2.0"
 description = "Commit hook appending message using branch name"
 authors = ["Ricardo Jesus"]
 
 [tool.poetry.dependencies]
-python = "^3.5"
+python = "^3.6"
+keyring = "~23"
+jira = "~3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.0.0"
