@@ -20,7 +20,7 @@ def get_issue_title_from_jira(jira_args, issue_name):
         if server and jira_username:
             jira_api_token = keyring.get_password("add-msg-issue-suffix-hook", jira_username)
             jira = JIRA(server=server, basic_auth=(jira_username, jira_api_token))
-            return jira.issue(issue_name, fields='summary')
+            return jira.issue(issue_name, fields='summary').fields.summary
 
 
 def main():
