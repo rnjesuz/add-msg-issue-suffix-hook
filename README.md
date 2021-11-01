@@ -41,16 +41,18 @@ Default is `[<issue name goes here>]`
     rev: v0.2.0  # Use the ref you want to point at
     hooks:
     -   id: add-msg-issue-suffix
-        args:
-            - --template=[{}]
+        args: [
+            '--template', '{}',
+            ]
 ```
 ```yaml
 -   repo: https://github.com/rnjesuz/add-msg-issue-suffix-hook
     rev: v0.2.0  # Use the ref you want to point at
     hooks:
     -   id: add-msg-issue-suffix
-        args:
-            - --template=Jira-Ref:{}
+        args: [
+            '--template', 'Jira-Ref:{}',
+            ]
 ```
 
 ### Issue title argument
@@ -62,16 +64,18 @@ Must provide the URL hosting the server and your Jira user's email, in this orde
     rev: v0.2.0  # Use the ref you want to point at
     hooks:
     -   id: add-msg-issue-suffix
-        args:
-            - --jira localhost:1234 throwaway@dispostable.com
+        args: [
+            '--jira', 'localhost:1234', 'throwaway@dispostable.com',
+            ]
 ```
 ```yaml
 -   repo: https://github.com/rnjesuz/add-msg-issue-suffix-hook
     rev: v0.2.0  # Use the ref you want to point at
     hooks:
     -   id: add-msg-issue-suffix
-        args:
-            - --jira https://jira.atlassian.com throwaway@dispostable.com
+        args: [
+            '--jira', 'https://jira.atlassian.com', 'throwaway@dispostable.com',
+            ]
 ```
 
 The code makes use of a keyring implementation to use credentials safely secured in your OS.<br>
@@ -89,6 +93,6 @@ keyring set add-msg-issue-suffix-hook your_jira_email
 ```
 Example:
 ```bash
-keyring set add-msg-issue-suffix-hook teste@notreal.nop
+keyring set add-msg-issue-suffix-hook teste@notreal.nope
 ```
 You will then be prompted to insert the API token.
