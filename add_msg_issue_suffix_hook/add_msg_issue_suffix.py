@@ -60,7 +60,7 @@ def main():
             suffix = template.format(issue_name)
             f.write("{}\n\n{}".format(content, suffix))
             if issue_title and issue_title not in content_subject:
-                f.write("{}\n{}".format(content, issue_title))
+                f.write("\n{}".format(issue_title))
         else:
             f.write(content)
 
